@@ -1,4 +1,4 @@
-#YALib: Yet Another Library
+# YALib: Yet Another Library
 
 Implementation of classic library information system with Ruby on Rails
 
