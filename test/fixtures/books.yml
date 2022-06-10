@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: MyString
+  title: MyString
+  category: MyString
+  publisher: one
+  year: 
+  qty_total: 1
+  qty_available: 1
+
+two:
+  isbn: MyString
+  title: MyString
+  category: MyString
+  publisher: two
+  year: 
+  qty_total: 1
+  qty_available: 1
