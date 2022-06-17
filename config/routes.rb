@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+  
   resources :publishers
   resources :authors
-  root 'pages#home'
+  resources :books
 end
