@@ -1,3 +1,3 @@
-# YALib: Yet Another Library
+# YALMS: Yet Another Library Management System
 
-Implementation of classic library information system with Ruby on Rails for practice
+Implementation of classic library management system with Ruby on Rails for practice
