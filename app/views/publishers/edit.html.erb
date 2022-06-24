@@ -1,0 +1,15 @@
+<h1>Publisher</h1>
+<h2>Edit publisher name</h2>
+<div>
+    
+    <%= form_with model: @publishers do |form| %>
+        Current name: <%= @publishers.name %> <br>
+        <%= form.label :new_name, "New Name: " %>
+        <%= form.text_field :new_name, value: @publishers.name %> <br>
+        Current city: <%= @publishers.city %> <br>
+        <%= form.label :new_city, "New City: " %>
+        <%= form.text_field :new_city, value: @publishers.city %> <br>
+
+        <%= form.submit "Update" %>
+    <% end %>
+</div>
