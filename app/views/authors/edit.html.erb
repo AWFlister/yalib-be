@@ -1,2 +1,11 @@
-<h1>Authors#edit</h1>
-<p>Find me in app/views/authors/edit.html.erb</p>
+<h1>Authors</h1>
+<div>
+    Edit author name <br>
+    <%= form_with model: @authors do |form| %>
+        Current name: <%= @authors.name %> <br>
+        <%= form.label :new_name, "New Name: " %>
+        <%= form.text_field :new_name %> <br>
+
+        <%= form.submit "Update" %>
+    <% end %>
+</div>
