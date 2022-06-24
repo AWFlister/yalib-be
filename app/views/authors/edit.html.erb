@@ -4,7 +4,7 @@
     <%= form_with model: @authors do |form| %>
         Current name: <%= @authors.name %> <br>
         <%= form.label :new_name, "New Name: " %>
-        <%= form.text_field :new_name %> <br>
+        <%= form.text_field :new_name, value: @authors.name %> <br>
 
         <%= form.submit "Update" %>
     <% end %>

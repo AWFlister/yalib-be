@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :authors, except: ['show']
+  resources :authors
   root 'pages#home'
 end

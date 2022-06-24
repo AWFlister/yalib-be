@@ -4,7 +4,11 @@ class AuthorsController < ApplicationController
   end
 
   def new
-    @authors
+    @authors = Author.new
+  end
+
+  def show
+    @authors = Author.find params[:id]
   end
 
   def create
@@ -27,5 +31,9 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
+    @authors = Author.find params[:id]
+    @authors.destroy
+
+    redirect_to authors_path
   end
 end
