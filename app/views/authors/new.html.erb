@@ -1,0 +1,9 @@
+<h1>Authors</h1>
+<h2> Add New Author </h2>
+
+<%= form_with model: @authors do |form| %>
+    <%= form.label :name, "Author's Name" %>
+    <%= form.text_field :name %> <br>
+    
+    <%= form.submit "Add" %>
+<% end %>

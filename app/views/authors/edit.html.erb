@@ -1,0 +1,11 @@
+<h1>Authors</h1>
+<div>
+    Edit author name <br>
+    <%= form_with model: @authors do |form| %>
+        Current name: <%= @authors.name %> <br>
+        <%= form.label :new_name, "New Name: " %>
+        <%= form.text_field :new_name, value: @authors.name %> <br>
+
+        <%= form.submit "Update" %>
+    <% end %>
+</div>
