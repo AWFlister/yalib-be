@@ -1,0 +1,33 @@
+<h1>Authors</h1>
+
+<div class='container'>
+    <p> This is the main Authors page. Below is the list of authors </p>
+    <p> <%= link_to "Add New Author", new_author_path %> </p>
+
+    <table>
+        <thead>
+            <tr>
+            <th>Author Name</th>
+            <th>Books</th>
+            <th colspan="3"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% unless @authors.empty? %>
+                <% @authors.each do |author| %>
+                <tr>
+                    <td><%= author.title %></td>
+                    <td><%= author.content %></td>
+                    <td><%= link_to "Edit", edit_book_path(author) %></td>
+                    <td><%= link_to "Destroy", author, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
+                </tr>
+                <% end %>
+            <% else %>
+                <tr>
+                    <td colspan=5> No Authors Available!</td>
+                </tr> 
+            <% end %>   
+        </tbody>
+    </table>
+</div>
