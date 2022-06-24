@@ -4,9 +4,14 @@ class AuthorsController < ApplicationController
   end
 
   def new
+    @authors = Author.new
   end
 
   def create
+    @authors = Author.create name: params[:author][:name]
+    @authors.save
+
+    redirect_to authors_path, notice: "Author Created"
   end
 
   def edit

@@ -17,9 +17,9 @@
             <% unless @authors.empty? %>
                 <% @authors.each do |author| %>
                 <tr>
-                    <td><%= author.title %></td>
-                    <td><%= author.content %></td>
-                    <td><%= link_to "Edit", edit_book_path(author) %></td>
+                    <td><%= author.name %></td>
+                    <td>Books Pending</td>
+                    <td><%= link_to "Edit", edit_author_path(author) %></td>
                     <td><%= link_to "Destroy", author, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
                 </tr>
                 <% end %>
